@@ -10,6 +10,6 @@ public class CicdApi {
 
     @GetMapping("/message")
     private String message(){
-        return "CI / CD Api is up";
+        return "CI / CD Api is up and runnnint";
     }
 }
