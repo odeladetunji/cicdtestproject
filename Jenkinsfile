@@ -5,7 +5,7 @@
          stage('Build') {
              steps {
                  //ssh into the remote machine.
-                 sh "sudo ssh -i ~/.ssh/dev_appserver.pem ec2-user@172.30.1.180"
+//                  sh "sudo ssh -i ~/.ssh/dev_appserver.pem ec2-user@172.30.1.180"
 
                  //Create a new Directory
                  sh "sudo mkdir cicdprojecttest"
