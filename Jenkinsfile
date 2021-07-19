@@ -32,7 +32,7 @@
                  sh "sudo rm nohup.out"
 
                  //Kill Java application listening on
-                 sh "sudo kill ${(lsof -t -i:9999)}"
+                 sh "sudo fuser -k 8086/tcp"
 
                  //Start the Java Application
                  sh "sudo nohup java -jar cicdtestprojectdev-0.0.1-SNAPSHOT.jar &"

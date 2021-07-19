@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="513ce8c2-9903-49cf-b5e8-deacf5406e8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cicdtestprojectdev/src/main/java/com/cicdtestprojectdev/cicdtestprojectdev/api/CicdApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cicdtestprojectdev/src/main/java/com/cicdtestprojectdev/cicdtestprojectdev/api/CicdApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +56,7 @@
       <workItem from="1626677922792" duration="1544000" />
       <workItem from="1626681091411" duration="1367000" />
       <workItem from="1626683213611" duration="1525000" />
-      <workItem from="1626690138288" duration="708000" />
+      <workItem from="1626690138288" duration="1049000" />
     </task>
     <servers />
   </component>
