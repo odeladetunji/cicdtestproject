@@ -9,7 +9,7 @@
 
                  //Create a new Directory
 //                  sh "sudo mkdir cicdprojecttest"
-
+//
                  node {
                        withCredentials([sshUserPrivateKey(credentialsId: 'app_server_dev', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
                          def remote = [:]
