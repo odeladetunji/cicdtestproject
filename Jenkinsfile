@@ -2,40 +2,37 @@
      agent any
 
      stages {
-         stage('Build') {
+         stage('Build And Deploy') {
              steps {
                  //ssh into the remote machine.
 //                  sh "sudo ssh -i ~/.ssh/dev_appserver.pem ec2-user@172.30.1.180"
 
                  //Create a new Directory
-                 sh "sudo mkdir cicdprojecttest"
+//                  sh "sudo mkdir cicdprojecttest"
 
-                 //Move into the new Directory.
-                 sh "cd cicdprojecttest"
-
-                 //Clone the cicdtestproject
-                 sh "sudo git clone http://github.com/odeladetunji/cicdtestproject.git"
-
-                 //Move into cicdtestprojectdev directory
-                 sh "cd cicdtestprojectdev";
-
-                 //Install the dependencies
-                 sh "mvn clean install";
-
-                 //Set change permission of the target directory;
-                 sh "sudo chmod -R 777 target"
-
-                 //Move into the target directory
-                 sh "cd target"
-
-                 //Remove nohup.out file;
-                 sh "sudo rm nohup.out"
-
-                 //Kill Java application listening on
-                 sh "sudo fuser -k 8086/tcp"
-
-                 //Start the Java Application
-                 sh "sudo nohup java -jar cicdtestprojectdev-0.0.1-SNAPSHOT.jar &"
+                 node {
+                       withCredentials([sshUserPrivateKey(credentialsId: 'app_server_dev', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
+                         def remote = [:]
+                           remote.name = ''
+                           remote.host = '172.30.1.180'
+                           remote.user = 'ec2-user'
+                           remote.password = ''
+                           remote.allowAnyHosts = true
+                           stage('Remote SSH') {
+                             sshCommand remote: remote, command: "sudo mkdir cicdprojecttest"
+                             sshCommand remote: remote, command: "cd cicdprojecttest"
+                             sshCommand remote: remote, command: "sudo git clone http://github.com/odeladetunji/cicdtestproject.git"
+                             sshCommand remote: remote, command: "cd cicdtestprojectdev"
+                             sshCommand remote: remote, command: "mvn clean install"
+                             sshCommand remote: remote, command: "sudo chmod -R 777 target"
+                             sshCommand remote: remote, command: "cd target"
+                             sshCommand remote: remote, command: "sudo rm nohup.out"
+                             sshCommand remote: remote, command: "sudo fuser -k 8086/tcp"
+                             sshCommand remote: remote, command: "sudo nohup java -jar cicdtestprojectdev-0.0.1-SNAPSHOT.jar &"
+                             sshCommand remote: remote, command: "echo successfully deployed"
+                           }
+                       }
+                 }
 
              }
          }
