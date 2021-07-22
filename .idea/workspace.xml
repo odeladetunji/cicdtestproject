@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="513ce8c2-9903-49cf-b5e8-deacf5406e8f" name="Default Changelist" comment="">
+    <list default="true" id="513ce8c2-9903-49cf-b5e8-deacf5406e8f" name="Default Changelist" comment="modified jenkinsFile for CI/CD 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +60,23 @@
       <workItem from="1626694422306" duration="255000" />
       <workItem from="1626949824586" duration="306000" />
       <workItem from="1626952763944" duration="1260000" />
-      <workItem from="1626958490330" duration="498000" />
+      <workItem from="1626958490330" duration="757000" />
     </task>
+    <task id="LOCAL-00001" summary="modified jenkinsFile for CI/CD">
+      <created>1626960251017</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626960251017</updated>
+    </task>
+    <task id="LOCAL-00002" summary="modified jenkinsFile for CI/CD 1">
+      <created>1626960294349</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626960294349</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,5 +93,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="modified jenkinsFile for CI/CD" />
+    <MESSAGE value="modified jenkinsFile for CI/CD 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified jenkinsFile for CI/CD 1" />
   </component>
 </project>
