@@ -1,9 +1,7 @@
 
      def remote = [:]
-     remote.name = ''
      remote.host = '172.30.1.180'
      remote.user = 'ec2-user'
-     remote.password = ''
      remote.allowAnyHosts = true
 
      node {
@@ -28,8 +26,6 @@
                  sshCommand remote: remote, command: "sudo nohup java -jar cicdtestprojectdev-0.0.1-SNAPSHOT.jar &"
                  sshCommand remote: remote, command: "echo successfully deployed"
                }
-
-
            }
      }
 

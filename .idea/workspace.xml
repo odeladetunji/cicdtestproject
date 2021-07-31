@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="513ce8c2-9903-49cf-b5e8-deacf5406e8f" name="Default Changelist" comment="modified jenkinsFile for CI/CD 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <workItem from="1627003120437" duration="304000" />
       <workItem from="1627030128400" duration="312000" />
       <workItem from="1627378972572" duration="292000" />
-      <workItem from="1627688575229" duration="497000" />
+      <workItem from="1627688575229" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="modified jenkinsFile for CI/CD">
       <created>1626960251017</created>
