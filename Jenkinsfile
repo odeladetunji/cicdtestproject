@@ -1,6 +1,6 @@
 
      def remote = [:]
-     remote.name = ''
+     remote.name = 'test'
      remote.host = '172.30.1.180'
      remote.user = 'ec2-user'
      remote.password = ''
@@ -10,7 +10,7 @@
            withCredentials([sshUserPrivateKey(credentialsId: 'app_server_dev', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
 
                stage('Create Project Directory'){
-                 sshCommand remote: remote, command: "sudo mkdir cicdprojecttest"
+                 sshCommand remote: remote, command: "mkdir cicdprojecttest"
                  sshCommand remote: remote, command: "cd cicdprojecttest"
                }
 
