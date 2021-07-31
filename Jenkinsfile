@@ -10,7 +10,7 @@
            withCredentials([sshUserPrivateKey(credentialsId: 'app_server_dev', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
 
                stage('Create Project Directory'){
-                 sshCommand remote: remote, command: "mkdir cicdprojecttest"
+                 sshCommand remote: remote, command: "sudo mkdir cicdprojecttest"
                  sshCommand remote: remote, command: "cd cicdprojecttest"
                }
 
