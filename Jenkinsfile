@@ -6,7 +6,7 @@
      remote.allowAnyHosts = true
 
      node {
-           withCredentials([sshUserPrivateKey(credentialsId: 'dev_appserver.pem')]) {
+           withCredentials([sshUserPrivateKey(credentialsId: 'dev_appserver.pem', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
 
                stage('Create Project Directory'){
                  sshCommand remote: remote, command: "sudo mkdir cicdprojecttest"
