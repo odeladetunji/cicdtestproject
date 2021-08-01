@@ -2,7 +2,7 @@
      def remote = [:]
      remote.name = 'ec2-user'
      remote.host = '172.30.1.180'
-     remote.user = jenkins
+     remote.user = "jenkins"
      remote.allowAnyHosts = true
 
      node {
