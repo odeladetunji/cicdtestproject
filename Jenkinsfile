@@ -23,7 +23,7 @@
                }
 
                stage('Build and Start the server') {
-                 sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; mvn clean install"
+                 sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; ls -l; mvn clean install"
                  sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; sudo chmod -R 777 target"
                  sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; cd target"
                  sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev/target; sudo rm nohup.out"
