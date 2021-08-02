@@ -25,7 +25,7 @@
                stage('Build and Start the server') {
                  sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; ls -l; sudo mvn clean install;"
                  sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; sudo chmod -R 777 target"
-                  sshCommand remote: remote, command: "sudo nohup fuser -k 8086/tcp &; exit"
+                  sshCommand remote: remote, command: "sudo fuser -k 8086/tcp"
                  sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev/target; sudo nohup java -jar cicdtestprojectdev-0.0.1-SNAPSHOT.jar &; exit"
                  sshCommand remote: remote, command: "echo successfully deployed"
                }
