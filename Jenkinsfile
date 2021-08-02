@@ -2,12 +2,13 @@
      def remote = [:]
      remote.name = 'ec2-user'
      remote.host = '172.30.1.180'
-     remote.user = "ec2-user"
      remote.password = ''
      remote.allowAnyHosts = true
 
      node {
            withCredentials([sshUserPrivateKey(credentialsId: 'dev_appserver.pem', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'ec2-user')]) {
+               remote.user = "ec2-user"
+               remote.identityFile = identity
 
                stage('Create Project Directory'){
                  sshCommand remote: remote, command: "cd"
