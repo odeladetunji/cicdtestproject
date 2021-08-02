@@ -18,6 +18,7 @@
                }
 
                stage('Clone Directory and change directory'){
+                 sshCommand remote: remote, command: "sudo rm -R cicdtestproject"
                  sshCommand remote: remote, command: "sudo git clone http://github.com/odeladetunji/cicdtestproject.git"
                  sshCommand remote: remote, command: "cd cicdtestproject; cd cicdtestprojectdev;"
                }
