@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="513ce8c2-9903-49cf-b5e8-deacf5406e8f" name="Default Changelist" comment="modified jenkinsFile for CI/CD 1" />
+    <list default="true" id="513ce8c2-9903-49cf-b5e8-deacf5406e8f" name="Default Changelist" comment="modified jenkinsFile for CI/CD 1">
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,6 +75,7 @@
       <workItem from="1627881603819" duration="762000" />
       <workItem from="1627883640244" duration="1516000" />
       <workItem from="1627885458337" duration="1473000" />
+      <workItem from="1627889760233" duration="280000" />
     </task>
     <task id="LOCAL-00001" summary="modified jenkinsFile for CI/CD">
       <created>1626960251017</created>
