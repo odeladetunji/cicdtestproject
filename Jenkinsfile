@@ -3,6 +3,7 @@
      remote.name = 'ec2-user'
      remote.host = '172.30.1.180'
      remote.user = "ec2-user"
+     remote.password = ''
      remote.allowAnyHosts = true
 
      node {
