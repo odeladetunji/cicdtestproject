@@ -12,13 +12,14 @@
 
                stage('Create Project Directory'){
                  sshCommand remote: remote, command: "cd"
+                 sshCommand remote: remote, command: "sudo rm -R cicdprojecttest"
                  sshCommand remote: remote, command: "sudo mkdir cicdprojecttest"
                  sshCommand remote: remote, command: "cd cicdprojecttest"
                }
 
                stage('Clone Directory and change directory'){
                  sshCommand remote: remote, command: "sudo git clone http://github.com/odeladetunji/cicdtestproject.git"
-                 sshCommand remote: remote, command: "cd cicdtestprojectdev"
+                 sshCommand remote: remote, command: "cd cicdtestproject; cd cicdtestprojectdev;"
                }
 
                stage('Build and Start the server') {
