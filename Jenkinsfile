@@ -23,13 +23,12 @@
                }
 
                stage('Build and Start the server') {
-                 sshCommand remote: remote, command: "cd cicdtestproject; cd cicdtestprojectdev;"
-                 sshCommand remote: remote, command: "mvn clean install"
-                 sshCommand remote: remote, command: "sudo chmod -R 777 target"
-                 sshCommand remote: remote, command: "cd target"
-                 sshCommand remote: remote, command: "sudo rm nohup.out"
+                 sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; mvn clean install"
+                 sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; sudo chmod -R 777 target"
+                 sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev; cd target"
+                 sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev/target; sudo rm nohup.out"
                  sshCommand remote: remote, command: "sudo fuser -k 8086/tcp"
-                 sshCommand remote: remote, command: "sudo nohup java -jar cicdtestprojectdev-0.0.1-SNAPSHOT.jar &"
+                 sshCommand remote: remote, command: "cd cicdtestproject/cicdtestprojectdev/target; sudo nohup java -jar cicdtestprojectdev-0.0.1-SNAPSHOT.jar &"
                  sshCommand remote: remote, command: "echo successfully deployed"
                }
 
